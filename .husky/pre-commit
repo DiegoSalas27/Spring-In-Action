@@ -1,2 +1,4 @@
 #!/bin/sh
-echo "hello"
+. "$(dirname "$0")/_/husky.sh"
+
+mvn clean test
