@@ -61,7 +61,7 @@ public class DesignTacoController {
 		if (errors.hasErrors()) {
 			return "design";
 		}
-		
+
 		tacoOrder.addTaco(taco);
 		log.info("Processing taco: {}", taco);
 
