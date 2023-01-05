@@ -12,10 +12,10 @@ import tacos.domain.Ingredient;
 import tacos.repository.IngredientRepository;
 
 @Repository
-public class IngredientRepositoryImpl implements IngredientRepository {
+public class JdbcIngredientRepository implements IngredientRepository {
 	private JdbcTemplate jdbcTemplate;
 	
-	public IngredientRepositoryImpl(JdbcTemplate jdbcTemplate) {
+	public JdbcIngredientRepository(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	
