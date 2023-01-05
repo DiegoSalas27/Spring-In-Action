@@ -7,6 +7,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 import tacos.repository.IngredientRepository;
+import tacos.repository.OrderRepository;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -18,9 +20,12 @@ public class HomeControllerTest {
 
 	@Autowired
 	private MockMvc mockMvc; // <2>
-	
+
 	@MockBean
 	private IngredientRepository ingredientRepository;
+
+	@MockBean
+	private OrderRepository orderRepository;
 
 	@Test
 	public void testHomePage() throws Exception {
