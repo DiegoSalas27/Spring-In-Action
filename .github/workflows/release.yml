@@ -4,11 +4,12 @@ on:
     branches:
      - main
 jobs:
-  changelog-and-release:
+  changelog:
     runs-on: ubuntu-latest
     steps:
-      - name: conventional Changelog Action
       - uses: actions/checkout@v2
+      
+      - name: conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3.7.1
         with: 
