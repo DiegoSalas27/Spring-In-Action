@@ -1,3 +1,14 @@
+# [0.3.0](https://github.com/DiegoSalas27/Spring-In-Action/compare/v0.2.0...v0.3.0) (2023-01-06)
+
+
+### Features
+
+* annotating the domain for persistence ([22887fb](https://github.com/DiegoSalas27/Spring-In-Action/commit/22887fba2f56e71f8be12651bf9377746dc75839))
+* preloading data with commandLineRunner ([79e945f](https://github.com/DiegoSalas27/Spring-In-Action/commit/79e945f4a9954a789d90261334eae2d8b40adc32))
+* repositories extend from CrudRepository ([81804ba](https://github.com/DiegoSalas27/Spring-In-Action/commit/81804ba20a1a29b8bdc58f9cd6cfca254285d96a))
+
+
+
 # [0.2.0](https://github.com/DiegoSalas27/Spring-In-Action/compare/v0.1.0...v0.2.0) (2023-01-06)
 
 
