@@ -27,7 +27,7 @@ import tacos.repository.IngredientRepository;
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
 	private final IngredientRepository ingredientRepository;
-	
+
 	@Autowired
 	public DesignTacoController(IngredientRepository ingredientRepository) {
 		this.ingredientRepository = ingredientRepository;
