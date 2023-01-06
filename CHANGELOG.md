@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/DiegoSalas27/Spring-In-Action/compare/v0.3.0...v0.4.0) (2023-01-06)
+
+
+### Features
+
+* changed to Spring Data JPA ([87e801b](https://github.com/DiegoSalas27/Spring-In-Action/commit/87e801b90dd82da7cf312473da8823c916e79ecd))
+
+
+
 # [0.3.0](https://github.com/DiegoSalas27/Spring-In-Action/compare/v0.2.0...v0.3.0) (2023-01-06)
 
 
