@@ -13,3 +13,11 @@ spring:
   thymeleaf:
     cache: false
     prefix: classpath:/templates/
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            clientId: 1324288688366593
+            clientSecret: d9fb99b146969f1a146bc66778159dd9
+            scope: email, public_profile
