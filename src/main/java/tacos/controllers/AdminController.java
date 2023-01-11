@@ -22,10 +22,10 @@ public class AdminController {
         return "admin";
     }
 
-    @PostMapping("/deleteOrders")
+    @PostMapping
     public String deleteAllOrders() {
         log.info("Deleting: {} Orders", adminService.getAllOrders());
         adminService.deleteAllOrders();
-        return "redirect:/admin";
+        return "redirect:/";
     }
 }
