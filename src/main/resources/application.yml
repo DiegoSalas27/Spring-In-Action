@@ -21,7 +21,27 @@ spring:
             clientId: 1324288688366593
             clientSecret: d9fb99b146969f1a146bc66778159dd9
             scope: email, public_profile
-            
+          
 taco:
   orders:
     pageSize: 10
+    
+logging:
+  level:
+    tacos: DEBUG
+    
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - prod
+      
+  datasource:
+    url: jdbc:mysql://localhost/tacocloud
+    username: tacouser
+    password: tacopassword
+
+logging:
+  level:
+    tacos: WARN
