@@ -1,3 +1,18 @@
+# [0.5.0](https://github.com/DiegoSalas27/Spring-In-Action/compare/v0.4.0...v0.5.0) (2023-01-11)
+
+
+### Features
+
+* add bcrypt config ([bdd19a1](https://github.com/DiegoSalas27/Spring-In-Action/commit/bdd19a19d310fd736c094901c1ca649f145c85c2))
+* add user registration ([2891eb2](https://github.com/DiegoSalas27/Spring-In-Action/commit/2891eb20f79cb35244339932dbc9581171e72197))
+* adding users to taco orders ([a13e440](https://github.com/DiegoSalas27/Spring-In-Action/commit/a13e44012ee69cf1986155ee7abb11407ccb7aa6))
+* applying method level security ([c09c23d](https://github.com/DiegoSalas27/Spring-In-Action/commit/c09c23dcb20fbece80a1065d4290f05e62c4e5fa))
+* creating custom login page ([71ea66c](https://github.com/DiegoSalas27/Spring-In-Action/commit/71ea66c7b3f1d679f24577ea8fe6fa5fb0966d7c))
+* enabling third-party authentication ([6f24736](https://github.com/DiegoSalas27/Spring-In-Action/commit/6f24736d2565c2bc3ab866e1822d4bc6b6fb9a2c))
+* in-memory user authentication ([ce963ec](https://github.com/DiegoSalas27/Spring-In-Action/commit/ce963ecdf7bd2c55e7e738e8a761ad990aa30958))
+
+
+
 # [0.4.0](https://github.com/DiegoSalas27/Spring-In-Action/compare/v0.3.0...v0.4.0) (2023-01-06)
 
 
