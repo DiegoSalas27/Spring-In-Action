@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    password: password
+    url: jdbc:h2:mem:testdb
+    username: sa
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: false
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            clientId: 1324288688366593
+            clientSecret: d9fb99b146969f1a146bc66778159dd9
+            scope: email, public_profile

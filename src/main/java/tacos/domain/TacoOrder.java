@@ -5,14 +5,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import jakarta.persistence.*;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -48,6 +43,9 @@ public class TacoOrder implements Serializable {
 
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Taco> tacos = new ArrayList<>();
+
+	@ManyToOne
+	private User user;
 
 	public void addTaco(Taco taco) {
 		this.tacos.add(taco);

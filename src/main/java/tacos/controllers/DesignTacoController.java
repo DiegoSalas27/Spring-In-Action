@@ -1,5 +1,6 @@
 package tacos.controllers;
 
+import java.security.Principal;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -19,7 +20,10 @@ import tacos.domain.Ingredient;
 import tacos.domain.Ingredient.Type;
 import tacos.domain.Taco;
 import tacos.domain.TacoOrder;
+import tacos.domain.User;
 import tacos.repository.IngredientRepository;
+import tacos.repository.TacoRepository;
+import tacos.repository.UserRepository;
 
 @Slf4j
 @Controller
@@ -28,9 +32,17 @@ import tacos.repository.IngredientRepository;
 public class DesignTacoController {
 	private final IngredientRepository ingredientRepository;
 
+	private TacoRepository tacoRepository;
+	private UserRepository userRepository;
+
 	@Autowired
-	public DesignTacoController(IngredientRepository ingredientRepository) {
+	public DesignTacoController(
+			IngredientRepository ingredientRepository,
+			TacoRepository tacoRepository,
+			UserRepository userRepository) {
 		this.ingredientRepository = ingredientRepository;
+		this.tacoRepository = tacoRepository;
+		this.userRepository = userRepository;
 	}
 
 	@ModelAttribute
@@ -53,6 +65,13 @@ public class DesignTacoController {
 		return new Taco();
 	}
 
+	@ModelAttribute(name = "user")
+	public User user(Principal principal) {
+		String username = principal.getName();
+		User user = userRepository.findByUsername(username);
+		return user;
+	}
+
 	@GetMapping
 	public String showDesignForm() {
 		return "design";
@@ -64,6 +83,8 @@ public class DesignTacoController {
 			return "design";
 		}
 
+		log.info("   --- Saving taco");
+//		Taco saved = tacoRepository.save(taco);
 		tacoOrder.addTaco(taco);
 		log.info("Processing taco: {}", taco);
 
