@@ -2,6 +2,7 @@ package tacos.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -43,6 +44,9 @@ public class SecurityConfig {
 		return http
 				.authorizeHttpRequests(
 						(authorizeHttpRequests) -> {
+							authorizeHttpRequests.requestMatchers(HttpMethod.OPTIONS).permitAll();
+							authorizeHttpRequests.requestMatchers("/api/**").permitAll();
+							authorizeHttpRequests.requestMatchers(HttpMethod.PATCH, "/api/ingredients").permitAll();
 							authorizeHttpRequests.requestMatchers("/design", "/orders").hasRole("USER");
 							authorizeHttpRequests.requestMatchers("/", "/**", "/h2-console/**").permitAll();
 						}
@@ -55,9 +59,9 @@ public class SecurityConfig {
 				.and()
 			        .logout()
 			          .logoutSuccessUrl("/")
-//				.and()
-//					.csrf()
-//						.ignoringRequestMatchers("/h2-console/**")
+				.and()
+					.csrf()
+						.ignoringRequestMatchers("/h2-console/**", "/api/**")
 //				// Allow pages to be loaded in frames from the same origin; needed for H2-Console
 //				.and()
 //					.headers()
