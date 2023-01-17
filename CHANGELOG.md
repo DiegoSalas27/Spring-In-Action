@@ -1,3 +1,16 @@
+# [0.7.0](https://github.com/DiegoSalas27/Spring-In-Action/compare/v0.6.0...v0.7.0) (2023-01-17)
+
+
+### Features
+
+* add crud handlers to order api controller ([0ed1506](https://github.com/DiegoSalas27/Spring-In-Action/commit/0ed1506ec294f4be7edc119258ec678eec20e1a3))
+* add taco post request handler ([c94a8d7](https://github.com/DiegoSalas27/Spring-In-Action/commit/c94a8d748f87c95b9d4596ee9fb9d7e7052c0771))
+* retrieve recent created tacos ([7e02cab](https://github.com/DiegoSalas27/Spring-In-Action/commit/7e02cabf8dac8c87428b4a10dff40a44dba51867))
+* return taco by id ([d7b78c6](https://github.com/DiegoSalas27/Spring-In-Action/commit/d7b78c6fa3da5c4be84c766c898ce55de8135163))
+* update configuration class to add tacos when application starts ([5459637](https://github.com/DiegoSalas27/Spring-In-Action/commit/545963764d210827436bd71ae7fdad3349281de8))
+
+
+
 # [0.6.0](https://github.com/DiegoSalas27/Spring-In-Action/compare/v0.5.0...v0.6.0) (2023-01-11)
 
 
@@ -42,17 +55,6 @@
 * annotating the domain for persistence ([22887fb](https://github.com/DiegoSalas27/Spring-In-Action/commit/22887fba2f56e71f8be12651bf9377746dc75839))
 * preloading data with commandLineRunner ([79e945f](https://github.com/DiegoSalas27/Spring-In-Action/commit/79e945f4a9954a789d90261334eae2d8b40adc32))
 * repositories extend from CrudRepository ([81804ba](https://github.com/DiegoSalas27/Spring-In-Action/commit/81804ba20a1a29b8bdc58f9cd6cfca254285d96a))
-
-
-
-# [0.2.0](https://github.com/DiegoSalas27/Spring-In-Action/compare/v0.1.0...v0.2.0) (2023-01-06)
-
-
-### Features
-
-* adapting the domain for persistence ([2da7cf5](https://github.com/DiegoSalas27/Spring-In-Action/commit/2da7cf5b3dd06de9af7fc200c998ece4b368fd88))
-* adding jdbc support and creating repository classes ([6273c55](https://github.com/DiegoSalas27/Spring-In-Action/commit/6273c550a9e95f2baeb241d1cdf3ec82be99dd97))
-* inserting data ([df43ed5](https://github.com/DiegoSalas27/Spring-In-Action/commit/df43ed51b2ed94b0013106a11ba4febd1bc23c7c))
 
 
 
